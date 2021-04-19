@@ -1,0 +1,11 @@
+# JUDGE FILES
+
+judge.*
+
+# PDF FILES
+
+*.pdf
+
+# TEST FILES
+
+test.*
