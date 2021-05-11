@@ -15,9 +15,10 @@ void *calculate (void * arg)
         int id_deref= (intptr_t) arg;
         
         // divide the problem set into "cpus" partitions
-        for(int r = id_deref * max_row/cpus; r < (id_deref + 1) * max_row / cpus; ++r)
+        //for(int r = id_deref * max_row/cpus; r < (id_deref + 1) * max_row / cpus; ++r)
+        for(int c = id_deref; c < max_column; c=c+cpus)
         {
-                for(int c = 0; c < max_column; ++c)
+                for(int r = 0; r < max_row; ++r)
                 {
                         complex<float> z= 0;
                         int n = 0;
