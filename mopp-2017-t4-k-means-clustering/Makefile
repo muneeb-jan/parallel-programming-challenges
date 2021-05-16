@@ -14,10 +14,10 @@ all : $(EXE)
 	@echo "Building..."
 
 $(EXE) : $(OBJECTS)
-	$(LD) $^ $(CFLAGS) $(LDFLAGS) -o $@
+	$(LD) -pthread $^ $(CFLAGS) $(LDFLAGS) -o $@ 
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) -pthread $(CFLAGS) -c $< -o $@ 
 
 %.o : %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
